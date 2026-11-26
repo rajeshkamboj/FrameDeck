@@ -168,7 +168,8 @@ namespace FrameDeck
             addingSubtitle = false;
             soundChangedDuringSeek = false;
             loadedSubtitles.Clear();
-            matchingSubtitles = SubtitleFiles.Find(path);
+            matchingSubtitles = SubtitleFiles.Find(path).Concat(SubtitleProvider().CachedFor(path))
+                .Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
             pauseAfterSeek = false;
             aspectIndex = 0;
             engine.SetAspectRatio(null);
@@ -466,6 +467,10 @@ namespace FrameDeck
                     };
                     trackMenu.Items.Add(item);
                 }
+                trackMenu.Items.Add("Find online subtitles...", null, (sender, args) => {
+                    if (!CanUseTrackMenu(generation)) return;
+                    BeginInvoke(new Action(() => FindOnlineSubtitles(generation)));
+                });
                 trackMenu.Items.Add("Browse for subtitle file", null, (sender, args) => {
                     if (!CanUseTrackMenu(generation)) return;
                     BeginInvoke(new Action(() => {

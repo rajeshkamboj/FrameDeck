@@ -6,7 +6,7 @@ using System.Windows.Forms;
 [assembly: System.Reflection.AssemblyTitle("FrameDeck")]
 [assembly: System.Reflection.AssemblyProduct("FrameDeck")]
 [assembly: System.Reflection.AssemblyDescription("Local video player for Windows")]
-[assembly: System.Reflection.AssemblyVersion("1.5.0.0")]
+[assembly: System.Reflection.AssemblyVersion("1.6.0.0")]
 
 namespace FrameDeck
 {
