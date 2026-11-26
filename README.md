@@ -34,6 +34,12 @@ Select **Mini player** while watching to shrink the player and keep it on top of
 
 FrameDeck automatically loads a subtitle with the same video name, such as Movie.srt or Movie.en.srt, from beside the video or a nearby Subs, Subtitles, or Captions folder. Use **Subtitles** to switch tracks, or choose **Browse for subtitle file** for a file with a different name or location. Dragging the timeline previews the new time and seeks when you release it. Use **Audio** to switch audio tracks. Video folders, recent history, and resume positions are saved in `%LOCALAPPDATA%\FrameDeck\library.json`.
 
+## Find online subtitles
+
+During playback, open **Subtitles → Find online subtitles**. Generate a free API key from the API section of your [SubDL account](https://subdl.com/developers) and enter it in FrameDeck. Then check the detected movie title and year, select a language, and click **Search**. Pick the release closest to your video and click **Download and load**. SDH results include sound cues.
+
+FrameDeck sends your API key, movie title, optional release year, and language to SubDL when you search. It compares release names locally. Downloaded subtitles are kept with the app's local settings and are available when you reopen the same file. FrameDeck still supports embedded and local subtitles.
+
 ## Movie library artwork
 
 Select **Online artwork** in the sidebar and paste an [OMDb API key](https://www.omdbapi.com/apikey.aspx) for posters, plot summaries and IMDb ratings. Optionally add a TMDB API key or [TMDB API Read Access Token](https://www.themoviedb.org/settings/api) for another source of posters and movie details. Use **Test connection** in Online artwork to check both credentials and their poster downloads. Ratings are labeled IMDb or TMDB depending on the source. Select a poster or title to bring the movie into the spotlight, or click its play icon to watch. Use the genre chips to filter the library. The spotlight shows a large poster, the plot, and the resume position if one is saved. Click Details to read the full plot.
